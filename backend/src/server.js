@@ -55,4 +55,8 @@ app.delete('/api/tasks/:id', (req, res) => {
   });
 });
 
-app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
+
+module.exports = app;
+if (require.main === module) {
+  app.listen(PORT, () => console.log(`Running on port ${PORT}`));
+}
